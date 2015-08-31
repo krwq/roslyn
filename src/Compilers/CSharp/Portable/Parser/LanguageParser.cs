@@ -8773,6 +8773,9 @@ namespace Microsoft.CodeAnalysis.CSharp.Syntax.InternalSyntax
                 case SyntaxKind.CharacterLiteralToken:
                     expr = _syntaxFactory.LiteralExpression(SyntaxFacts.GetLiteralExpression(tk), this.EatToken());
                     break;
+                case SyntaxKind.Utf8StringToken:
+                    expr = _syntaxFactory.Utf8StringExpression(this.EatToken());
+                    break;
                 case SyntaxKind.InterpolatedStringStartToken:
                     throw new NotImplementedException(); // this should not occur because these tokens are produced and parsed immediately
                 case SyntaxKind.InterpolatedStringToken:
