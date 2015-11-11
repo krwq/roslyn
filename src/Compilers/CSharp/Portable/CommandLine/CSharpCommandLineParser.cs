@@ -1639,6 +1639,10 @@ namespace Microsoft.CodeAnalysis.CSharp
                     version = LanguageVersion.CSharp2;
                     return true;
 
+                case "experimental":
+                    version = LanguageVersion.Experimental;
+                    return true;
+
                 case "default":
                     version = defaultVersion;
                     return true;

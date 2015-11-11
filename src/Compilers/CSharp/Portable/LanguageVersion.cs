@@ -57,13 +57,24 @@ namespace Microsoft.CodeAnalysis.CSharp
         /// </list> 
         /// </remarks> 
         CSharp6 = 6,
+
+        /// <summary> 
+        /// C# language version experimental.
+        /// </summary>
+        /// <remarks>
+        /// <para>Features:</para>
+        /// <list type="bullet">
+        /// <item><description>TO DO</description></item> 
+        /// </list> 
+        /// </remarks> 
+        Experimental = 999999
     }
 
     internal static partial class LanguageVersionExtensions
     {
         internal static bool IsValid(this LanguageVersion value)
         {
-            return value >= LanguageVersion.CSharp1 && value <= LanguageVersion.CSharp6;
+            return value >= LanguageVersion.CSharp1 && value <= LanguageVersion.Experimental;
         }
 
         internal static object Localize(this LanguageVersion value)
@@ -87,6 +98,8 @@ namespace Microsoft.CodeAnalysis.CSharp
                     return ErrorCode.ERR_FeatureNotAvailableInVersion5;
                 case LanguageVersion.CSharp6:
                     return ErrorCode.ERR_FeatureNotAvailableInVersion6;
+                case LanguageVersion.Experimental:
+                    return ErrorCode.ERR_FeatureNotAvailableInVersionExperimental;
                 default:
                     throw ExceptionUtilities.UnexpectedValue(version);
             }

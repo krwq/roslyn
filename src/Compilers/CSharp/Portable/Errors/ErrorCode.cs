@@ -1284,6 +1284,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         ERR_BlockBodyAndExpressionBody = 8057,
         ERR_FeatureIsExperimental = 8058,
         ERR_FeatureNotAvailableInVersion6 = 8059,
+        ERR_FeatureNotAvailableInVersionExperimental = 999999,
         // available 8060-8069
         ERR_SwitchFallOut = 8070,
         // ERR_UnexpectedBoundGenericName = 8071, // for nameof - used in an early prototype

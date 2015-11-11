@@ -12,6 +12,7 @@ Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.WithKind(Microsoft.CodeAnalysis
 Microsoft.CodeAnalysis.CSharp.CSharpScriptCompilationInfo
 Microsoft.CodeAnalysis.CSharp.CSharpScriptCompilationInfo.PreviousScriptCompilation.get -> Microsoft.CodeAnalysis.CSharp.CSharpCompilation
 Microsoft.CodeAnalysis.CSharp.CSharpScriptCompilationInfo.WithPreviousScriptCompilation(Microsoft.CodeAnalysis.CSharp.CSharpCompilation compilation) -> Microsoft.CodeAnalysis.CSharp.CSharpScriptCompilationInfo
+Microsoft.CodeAnalysis.CSharp.LanguageVersion.Experimental = 999999 -> Microsoft.CodeAnalysis.CSharp.LanguageVersion
 Microsoft.CodeAnalysis.CSharp.Syntax.CompilationUnitSyntax.GetLoadDirectives() -> System.Collections.Generic.IList<Microsoft.CodeAnalysis.CSharp.Syntax.LoadDirectiveTriviaSyntax>
 Microsoft.CodeAnalysis.CSharp.Syntax.LoadDirectiveTriviaSyntax
 Microsoft.CodeAnalysis.CSharp.Syntax.LoadDirectiveTriviaSyntax.File.get -> Microsoft.CodeAnalysis.SyntaxToken

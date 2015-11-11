@@ -158,13 +158,6 @@ namespace Microsoft.CodeAnalysis.CSharp
         {
             switch (feature)
             {
-                case MessageID.IDS_FeatureBinaryLiteral:
-                    return "binaryLiterals";
-                case MessageID.IDS_FeatureDigitSeparator:
-                    return "digitSeparators";
-                case MessageID.IDS_FeatureLocalFunctions:
-                    return "localFunctions";
-
                 default:
                     return null;
             }
@@ -176,6 +169,11 @@ namespace Microsoft.CodeAnalysis.CSharp
             // Checks are in the LanguageParser unless otherwise noted.
             switch (feature)
             {
+                case MessageID.IDS_FeatureBinaryLiteral:
+                case MessageID.IDS_FeatureDigitSeparator:
+                case MessageID.IDS_FeatureLocalFunctions:
+                    return LanguageVersion.Experimental;
+
                 // C# 6 features.
                 case MessageID.IDS_FeatureExceptionFilter:
                 case MessageID.IDS_FeatureAutoPropertyInitializer:
